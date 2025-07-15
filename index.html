@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe - Cozy Gaming Experience</title>
+  <meta name="description" content="A warm & friendly take on the classic Tic Tac Toe game. Perfect for coffee breaks and friend time.">
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#8b5a3c">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Tic Tac Toe - Cozy Gaming">
+  <meta property="og:description" content="A warm & friendly take on the classic game">
+  <meta property="og:type" content="website">
+  
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+  <!-- Critical CSS would be inlined here in production -->
+  <style>
+    /* Critical CSS for faster loading */
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #fdf9f5;
+      color: #3a2f26;
+    }
+    
+    /* Loading spinner */
+    .loading-spinner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fdf9f5;
+    }
+    
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid #e8ddd4;
+      border-top: 4px solid #8b5a3c;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #2a201a;
+        color: #f5f0ea;
+      }
+      .loading-spinner {
+        background-color: #2a201a;
+      }
+      .spinner {
+        border-color: #4a3d32;
+        border-top-color: #d4a574;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- App Container -->
+  <div id="root">
+    <!-- Loading fallback -->
+    <div class="loading-spinner">
+      <div class="spinner"></div>
+    </div>
+  </div>
+  
+  <!-- React App Script -->
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
